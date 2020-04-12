@@ -1,0 +1,10 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/functions/tslint.json"
+      ],
+      "url": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tslint.json"
+    }
+  ]
+}
