@@ -8,7 +8,7 @@
     ],
     "rewrites": [
       {
-        "function": "helloWorld",
+        "function": "goPackage",
         "source": "**"
       }
     ]
