@@ -1,4 +1,4 @@
-# go-jlucktay-dev
+# go.jlucktay.dev
 
 Firebase CLI calls:
 
