@@ -1,5 +1,21 @@
 baseURL = "https://jlucktay.dev/"
 languageCode = "en-au"
-title = "My New Hugo Site"
-
 theme = "m10c"
+title = "James Lucktaylor"
+
+[params]
+  author = "James Lucktaylor"
+  description = "Dev, gamer, husband."
+  avatar = "og-image.webp"
+
+  [[params.social]]
+    name = "github"
+    url = "https://github.com/jlucktay"
+
+  [[params.social]]
+    name = "linkedin"
+    url = "https://linkedin.com/in/jlucktay"
+
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/jlucktay"
