@@ -1,0 +1,5 @@
+baseURL = "https://jlucktay.dev/"
+languageCode = "en-au"
+title = "My New Hugo Site"
+
+theme = "m10c"
