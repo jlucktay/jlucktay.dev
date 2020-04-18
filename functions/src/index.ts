@@ -1,11 +1,11 @@
-import { region } from 'firebase-functions/lib/function-builder'
+import { runWith } from 'firebase-functions/lib/function-builder'
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
 
 const go_vcs_base = "https://github.com/jlucktay"
 
-export const goPackage = region('asia-northeast1').runWith({ memory: "128MB" }).https.onRequest((request, response) => {
+export const goPackage = runWith({ memory: "128MB" }).https.onRequest((request, response) => {
   const firstSlash = request.path.substring(1).indexOf("/")
   let basePackage = request.path
 
