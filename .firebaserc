@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "jlucktay-dev"
+  },
+  "targets": {
+    "jlucktay-dev": {
+      "hosting": {
+        "hugo": [
+          "jlucktay-dev"
+        ],
+        "go-package": [
+          "go-jlucktay-dev-3cdec"
+        ]
+      }
+    }
   }
 }
