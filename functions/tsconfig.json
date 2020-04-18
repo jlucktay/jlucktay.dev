@@ -1,0 +1,20 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowJs": false,
+    "listEmittedFiles": true,
+    "module": "CommonJS",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "removeComments": false,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2019"
+  },
+  "include": [
+    "src"
+  ]
+}
