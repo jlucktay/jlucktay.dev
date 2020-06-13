@@ -5,11 +5,11 @@
   "targets": {
     "jlucktay-dev": {
       "hosting": {
-        "hugo": [
-          "jlucktay-dev"
-        ],
         "go-package": [
           "go-jlucktay-dev-3cdec"
+        ],
+        "hugo": [
+          "jlucktay-dev"
         ]
       }
     }

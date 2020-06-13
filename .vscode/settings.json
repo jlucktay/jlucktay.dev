@@ -1,6 +1,8 @@
 {
   "files.exclude": {
-    "functions/node_modules/": true
+    "functions/node_modules/": true,
+    "hugo/public/": true,
+    "hugo/resources/_gen/": true
   },
   "json.schemas": [
     {
