@@ -1,4 +1,7 @@
 {
+  "files.exclude": {
+    "functions/node_modules/": true
+  },
   "json.schemas": [
     {
       "fileMatch": [
