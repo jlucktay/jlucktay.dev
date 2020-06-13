@@ -19,3 +19,8 @@ title = "James Lucktaylor"
   [[params.social]]
     name = "twitter"
     url = "https://twitter.com/jlucktay"
+
+[taxonomies]
+  category = "categories"
+  director = "directors"
+  tag = "tags"
