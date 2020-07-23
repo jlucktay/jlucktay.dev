@@ -3,9 +3,9 @@ export const foo = {
   a: {
     b: {
       c: {
-        hello: (name: string) => `Hello, ${name}`,
+        hello: (name: string): string => `Hello, ${name}`,
       },
     },
   },
-  name: () => "foo",
+  name: (): string => "foo",
 };
