@@ -31,6 +31,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # TODO(jlucktay): if node version is 10, realign package.json with
+      # https://github.com/microsoft/TypeScript/wiki/Node-Target-Mapping#node-10
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
