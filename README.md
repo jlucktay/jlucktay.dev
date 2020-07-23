@@ -4,6 +4,8 @@ It's a website, about me.
 
 ## go.jlucktay.dev
 
+![Node.js CI](https://github.com/jlucktay/jlucktay.dev/workflows/Node.js%20CI/badge.svg)
+
 Personalised remote import paths for my Go code.
 
 ### Firebase
