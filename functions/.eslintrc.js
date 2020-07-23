@@ -31,13 +31,6 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   root: true,
   rules: {
-    "@typescript-eslint/no-floating-promises": "error", // TODO(jlucktay)
-    "@typescript-eslint/no-param-reassign": "error", // TODO(jlucktay)
-    "@typescript-eslint/no-unnecessary-type-assertion": "error", // TODO(jlucktay)
-    "import/no-deprecated": "warn", // TODO(jlucktay)
-    "import/no-extraneous-dependencies": "error", // TODO(jlucktay)
-    "import/no-unassigned-import": "warn", // TODO(jlucktay)
-
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/no-empty-function": "error",
     "@typescript-eslint/no-empty-interface": "warn",
