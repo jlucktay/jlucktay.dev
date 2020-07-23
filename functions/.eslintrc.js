@@ -11,34 +11,43 @@ https://github.com/typescript-eslint/tslint-to-eslint-config/blob/master/docs/FA
 
 Happy linting! 💖
 */
+
 module.exports = {
   env: {
     browser: true,
     es6: true,
+    node: true,
   },
-  extends: ["prettier", "prettier/@typescript-eslint"],
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     sourceType: "module",
   },
   plugins: ["@typescript-eslint"],
+  root: true,
   rules: {
+    "@typescript-eslint/no-floating-promises": "error", // TODO(jlucktay)
+    "@typescript-eslint/no-param-reassign": "error", // TODO(jlucktay)
+    "@typescript-eslint/no-unnecessary-type-assertion": "error", // TODO(jlucktay)
+    "import/no-deprecated": "warn", // TODO(jlucktay)
+    "import/no-extraneous-dependencies": "error", // TODO(jlucktay)
+    "import/no-unassigned-import": "warn", // TODO(jlucktay)
+
     "@typescript-eslint/adjacent-overload-signatures": "error",
     "@typescript-eslint/no-empty-function": "error",
     "@typescript-eslint/no-empty-interface": "warn",
-    // "@typescript-eslint/no-floating-promises": "error", // TODO(jlucktay)
     "@typescript-eslint/no-namespace": "error",
-    // "@typescript-eslint/no-param-reassign": "error", // TODO(jlucktay)
-    // "@typescript-eslint/no-unnecessary-type-assertion": "error", // TODO(jlucktay)
     "@typescript-eslint/prefer-for-of": "warn",
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/unified-signatures": "warn",
     "comma-dangle": ["error", "always-multiline"],
     "constructor-super": "error",
     eqeqeq: ["warn", "always"],
-    // "import/no-deprecated": "warn", // TODO(jlucktay)
-    // "import/no-extraneous-dependencies": "error", // TODO(jlucktay)
-    // "import/no-unassigned-import": "warn", // TODO(jlucktay)
     "no-cond-assign": "error",
     "no-duplicate-case": "error",
     "no-duplicate-imports": "error",
