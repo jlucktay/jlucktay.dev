@@ -5,7 +5,9 @@ It's a website, about me.
 ## go.jlucktay.dev
 
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=jlucktay/jlucktay.dev)](https://dependabot.com)
+[![jest](https://jestjs.io/img/jest-badge.svg)](https://github.com/facebook/jest)
 ![Node.js CI](https://github.com/jlucktay/jlucktay.dev/workflows/Node.js%20CI/badge.svg)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Personalised remote import paths for my Go code.
 

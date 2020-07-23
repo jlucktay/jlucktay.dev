@@ -1,0 +1,13 @@
+{
+  "tasks": [
+    {
+      "detail": "Run ESLint",
+      "label": "npm: lint - functions",
+      "path": "functions/",
+      "problemMatcher": ["$eslint-stylish"],
+      "script": "lint",
+      "type": "npm"
+    }
+  ],
+  "version": "2.0.0"
+}

@@ -2,6 +2,9 @@
   "compileOnSave": true,
   "compilerOptions": {
     "allowJs": false,
+    "baseUrl": "./",
+    "declaration": true,
+    "lib": ["ES2019"],
     "listEmittedFiles": true,
     "module": "CommonJS",
     "noFallthroughCasesInSwitch": true,
@@ -12,9 +15,8 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "ES2019"
+    "target": "ES2019",
+    "types": ["jest"]
   },
-  "include": [
-    "src"
-  ]
+  "exclude": ["node_modules", "lib"]
 }
