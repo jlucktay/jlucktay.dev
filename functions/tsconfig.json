@@ -12,7 +12,8 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "ES2019"
+    "target": "ES2019",
+    "types": ["jest"]
   },
   "include": ["src", "test"]
 }

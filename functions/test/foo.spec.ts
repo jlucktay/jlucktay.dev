@@ -1,6 +1,6 @@
 // foo.spec.ts
-import { mocked } from "ts-jest/utils";
 import { foo } from "../src/foo";
+import { mocked } from "ts-jest/utils";
 jest.mock("../src/foo");
 
 // here the whole foo var is mocked deeply
