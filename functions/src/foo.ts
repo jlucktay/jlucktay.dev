@@ -7,5 +7,5 @@ export const foo = {
       },
     },
   },
-  name: () => 'foo',
-}
+  name: () => "foo",
+};

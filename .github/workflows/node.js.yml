@@ -38,6 +38,8 @@ jobs:
 
       - run: npm ci
 
+      - run: npx prettier --check .
+
       - run: npm run lint
 
       - run: npm run build
