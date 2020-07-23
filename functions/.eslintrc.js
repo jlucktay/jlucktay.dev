@@ -16,10 +16,13 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    "jest/globals": true,
     node: true,
   },
   extends: [
     "eslint:recommended",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "prettier/@typescript-eslint",
@@ -28,7 +31,7 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "jest"],
   root: true,
   rules: {
     "@typescript-eslint/adjacent-overload-signatures": "error",
@@ -38,6 +41,13 @@ module.exports = {
     "@typescript-eslint/prefer-for-of": "warn",
     "@typescript-eslint/triple-slash-reference": "error",
     "@typescript-eslint/unified-signatures": "warn",
+
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
+
     "comma-dangle": ["error", "always-multiline"],
     "constructor-super": "error",
     eqeqeq: ["warn", "always"],
