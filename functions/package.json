@@ -29,7 +29,7 @@
     "firebase-functions-test": "^0.2.1",
     "jest": "^26.2.2",
     "prettier": "2.0.5",
-    "ts-jest": "^26.1.4",
+    "ts-jest": "^26.2.0",
     "typescript": "^3.9.7"
   },
   "private": true
