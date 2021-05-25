@@ -30,10 +30,8 @@ export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
     const goSource: string[] = [
       /* prefix */ request.hostname + basePackage,
       /* home */ go_vcs_base + basePackage,
-      /* directory */ go_vcs_base + basePackage + "/tree/master{/dir}",
-      /* file */ go_vcs_base +
-        basePackage +
-        "/tree/master{/dir}/{file}#L{line}",
+      /* directory */ go_vcs_base + basePackage + "/tree/main{/dir}",
+      /* file */ go_vcs_base + basePackage + "/tree/main{/dir}/{file}#L{line}",
     ];
 
     const goSourceMeta =
