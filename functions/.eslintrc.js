@@ -11,7 +11,6 @@ module.exports = {
     "plugin:jest/style",
     "plugin:@typescript-eslint/recommended",
     "prettier",
-    "prettier/@typescript-eslint",
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
