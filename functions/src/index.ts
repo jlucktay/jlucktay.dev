@@ -3,7 +3,7 @@ import { runWith } from "firebase-functions";
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
 
-const go_vcs_base = "https://github.com/jlucktay";
+const goVCSBase = "https://github.com/jlucktay";
 
 export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
   (request, response) => {
@@ -19,7 +19,7 @@ export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
     const goImport: string[] = [
       /* import-prefix */ request.hostname + basePackage,
       /* vcs */ "git",
-      /* repo-root */ go_vcs_base + basePackage,
+      /* repo-root */ goVCSBase + basePackage,
     ];
 
     const goImportMeta =
@@ -29,14 +29,14 @@ export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
     // <meta name="go-source" content="prefix home directory file">
     const goSource: string[] = [
       /* prefix */ request.hostname + basePackage,
-      /* home */ go_vcs_base + basePackage,
-      /* directory */ go_vcs_base + basePackage + "/tree/main{/dir}",
-      /* file */ go_vcs_base + basePackage + "/tree/main{/dir}/{file}#L{line}",
+      /* home */ goVCSBase + basePackage,
+      /* directory */ goVCSBase + basePackage + "/tree/main{/dir}",
+      /* file */ goVCSBase + basePackage + "/tree/main{/dir}/{file}#L{line}",
     ];
 
     const goSourceMeta =
       `<meta name="go-source" content="` + goSource.join(" ") + `">`;
 
     response.send(goImportMeta + "\n" + goSourceMeta + "\n");
-  }
+  },
 );
