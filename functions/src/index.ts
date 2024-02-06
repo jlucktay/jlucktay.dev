@@ -1,5 +1,4 @@
 import { runWith } from "firebase-functions";
-import { Logging } from "@google-cloud/logging";
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
@@ -8,16 +7,6 @@ const goVCSBase = "https://github.com/jlucktay";
 
 export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
   (request, response) => {
-    const logging = new Logging();
-    const log = logging.log("goPackage");
-
-    const METADATA = {
-      resource: {
-        type: "cloud_function",
-        labels: { function_name: "goPackage" },
-      },
-    };
-
     const firstSlash = request.path.substring(1).indexOf("/");
     let basePackage = request.path;
 
@@ -36,9 +25,6 @@ export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
     const goImportMeta =
       `<meta name="go-import" content="` + goImport.join(" ") + `">`;
 
-    const logGoImportMeta = { message: goImportMeta };
-    log.write(log.entry(METADATA, logGoImportMeta));
-
     // https://github.com/golang/gddo/wiki/Source-Code-Links
     // <meta name="go-source" content="prefix home directory file">
     const goSource: string[] = [
@@ -50,9 +36,6 @@ export const goPackage = runWith({ memory: "128MB" }).https.onRequest(
 
     const goSourceMeta =
       `<meta name="go-source" content="` + goSource.join(" ") + `">`;
-
-    const logGoSourceMeta = { message: goSourceMeta };
-    log.write(log.entry(METADATA, logGoSourceMeta));
 
     response.send(goImportMeta + "\n" + goSourceMeta + "\n");
   },
