@@ -1,4 +1,4 @@
-import { runWith } from "firebase-functions/lib/function-builder";
+import { runWith } from "firebase-functions";
 
 // Start writing Firebase Functions
 // https://firebase.google.com/docs/functions/typescript
