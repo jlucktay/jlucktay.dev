@@ -4,23 +4,16 @@
     "allowJs": false,
     "baseUrl": "./",
     "declaration": true,
-    "esModuleInterop": true,
-    "lib": ["ES2023"],
     "listEmittedFiles": true,
-    "module": "node16",
-    "moduleResolution": "Node16",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "lib",
     "removeComments": false,
-    // https://github.com/stephenh/ts-proto/issues/891
-    "skipLibCheck": true,
     "sourceMap": true,
-    "strict": true,
-    "target": "ES2022",
     "types": ["jest"]
   },
-  "exclude": ["node_modules", "lib"]
+  "exclude": ["node_modules", "lib"],
+  "extends": "@tsconfig/node21/tsconfig.json"
 }
