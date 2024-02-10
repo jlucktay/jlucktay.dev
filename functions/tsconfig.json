@@ -4,9 +4,9 @@
     "allowJs": false,
     "baseUrl": "./",
     "declaration": true,
-    "lib": ["ES2019"],
+    "lib": ["ES2023"],
     "listEmittedFiles": true,
-    "module": "CommonJS",
+    "module": "node16",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noUnusedLocals": true,
@@ -15,7 +15,7 @@
     "removeComments": false,
     "sourceMap": true,
     "strict": true,
-    "target": "es2019",
+    "target": "ES2022",
     "types": ["jest"]
   },
   "exclude": ["node_modules", "lib"]
