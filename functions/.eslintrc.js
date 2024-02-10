@@ -62,5 +62,8 @@ module.exports = {
     "no-var": "warn",
     "no-void": "error",
     "prefer-const": "warn",
+
+    // Deprecated: https://eslint.org/blog/2018/11/jsdoc-end-of-life/
+    "require-jsdoc": "off",
   },
 };
