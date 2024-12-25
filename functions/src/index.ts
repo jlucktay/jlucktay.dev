@@ -1,5 +1,5 @@
 import { Response } from "express";
-import { Request, runWith } from "firebase-functions";
+import { Request, runWith } from "firebase-functions/v1";
 
 const goVCSBase: string = "https://github.com/jlucktay" as const;
 
