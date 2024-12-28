@@ -1,0 +1,6 @@
+#:schema https://mise.jdx.dev/schema/mise.json
+
+[tools]
+# Align version with:
+# .github/workflows/hugo.yaml#L36
+"aqua:gohugoio/hugo/hugo-extended" = "0.140.1"
