@@ -65,15 +65,16 @@ jobs:
           npm ci || true
 
       - name: Build with Hugo
-        env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_ENVIRONMENT: production
-          TZ: Europe/London
         run: >-
           hugo
           --baseURL "${{ steps.pages.outputs.base_url }}/"
           --gc
           --minify
+        working-directory: ./hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Europe/London
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
