@@ -37,19 +37,19 @@ jobs:
 
     steps:
       - name: Install Hugo CLI
-        env:
-          RELEASE_PREFIX: https://github.com/gohugoio/hugo/releases/download/v
         run: >-
           wget --output-document=${{ runner.temp }}/hugo.deb --progress=dot:giga
           ${RELEASE_PREFIX}${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
           &&
           sudo dpkg --install ${{ runner.temp }}/hugo.deb
+        env:
+          RELEASE_PREFIX: https://github.com/gohugoio/hugo/releases/download/v
 
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
+          submodules: recursive
 
       - id: pages
         name: Configure GitHub Pages
