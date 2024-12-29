@@ -1,7 +1,14 @@
 ---
-title: "My First Post"
-date: 2020-04-17T09:09:51+01:00
-draft: true
+title: My First Post
+description: The very first one. Never written this before. Nope. No way.
+date: 2024-12-29
+tags:
+  - hello
+  - go
 ---
 
-Hello world!
+```go
+func main() {
+  println("Hello, World!")
+}
+```
