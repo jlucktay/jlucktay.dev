@@ -3320,18 +3320,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"firebase-functions-test@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "firebase-functions-test@npm:3.1.1"
+"firebase-functions-test@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "firebase-functions-test@npm:3.4.0"
   dependencies:
     "@types/lodash": "npm:^4.14.104"
     lodash: "npm:^4.17.5"
     ts-deepmerge: "npm:^2.0.1"
   peerDependencies:
-    firebase-admin: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0
-    firebase-functions: ">=4.3.0"
+    firebase-admin: ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
+    firebase-functions: ">=4.9.0"
     jest: ">=28.0.0"
-  checksum: 10c0/6e9a3eb5cf4e18c85f2f5d991174c8c713a862824e50de9a90e7b6e53b379f28d8a9ad2d3e79e7ba577bc9fae13b58bbfcc686b9f0ce74081614abdf21b5c213
+  checksum: 10c0/a5b284402e947ed4277a70c9e35f7f73568aeb48aef5f46db2ef0fc8e59f8480054e86f0157bebc64b854e5fe154efcfb9dc3dba942000ab74c6660499ebb643
   languageName: node
   linkType: hard
 
@@ -3496,7 +3496,7 @@ __metadata:
     eslint-plugin-jest: "npm:^27.6.3"
     firebase-admin: "npm:^11.11.1"
     firebase-functions: "npm:^4.6.0"
-    firebase-functions-test: "npm:^3.1.1"
+    firebase-functions-test: "npm:^3.4.0"
     jest: "npm:^29.7.0"
     prettier: "npm:3.2.5"
     ts-jest: "npm:^29.1.2"
