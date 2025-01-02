@@ -1,10 +1,10 @@
 {
+  "editor.rulers": [159, 160],
   "files.exclude": {
     "**/*.js": true,
     "**/*.js.map": true,
     "**/node_modules/": true,
     "hugo/public/": true,
     "hugo/resources/_gen/": true
-  },
-  "json.schemas": []
+  }
 }
