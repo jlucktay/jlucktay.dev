@@ -1,0 +1,8 @@
+name = "go-jlucktay-dev-cf-worker"
+main = "build/worker/shim.mjs"
+compatibility_date = "2025-07-12"
+
+routes = [{ pattern = "go.jlucktay.dev", custom_domain = true }]
+
+[build]
+command = "cargo binstall worker-build && worker-build --release"

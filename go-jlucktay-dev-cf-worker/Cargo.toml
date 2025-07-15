@@ -1,0 +1,31 @@
+[package]
+name = "go-jlucktay-dev-cf-worker"
+description = "Vanity import path URLs for my Go modules"
+version = "0.1.0"
+edition = "2024"
+authors = ["James Lucktaylor <jlucktay+github@gmail.com>"]
+repository = "https://github.com/jlucktay/jlucktay.dev"
+license = "MIT"
+
+[package.metadata.release]
+release = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+console_error_panic_hook = { version = "0.1.7" }
+url = "2.5.4"
+worker = { version = "0.6.0" }
+worker-macros = { version = "0.6.0" }
+
+# https://doc.rust-lang.org/clippy/lints.html
+[workspace.lints.clippy]
+correctness = "deny"
+suspicious = "deny"
+complexity = "deny"
+perf = "deny"
+style = "deny"
+
+pedantic = "deny"
+cargo = "deny"

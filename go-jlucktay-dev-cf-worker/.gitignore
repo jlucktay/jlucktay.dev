@@ -1,0 +1,8 @@
+# Cloudflare CLI
+/.wrangler/
+
+# Intermediate WASM
+/build/
+
+# Rust build output
+/target/
