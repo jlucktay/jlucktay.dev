@@ -10,7 +10,7 @@ updates:
     schedule:
       day: sunday
       interval: weekly
-      time: 03:00
+      time: '03:00'
       timezone: Etc/UTC
 
     # Group all of the GHA updates together.
@@ -35,7 +35,7 @@ updates:
     schedule:
       day: sunday
       interval: weekly
-      time: 04:00
+      time: '04:00'
       timezone: Etc/UTC
 
     # Bundle all non-major dependency bumps together into the same PR.
