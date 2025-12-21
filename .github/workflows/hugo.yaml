@@ -32,28 +32,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    env:
-      HUGO_VERSION: 0.140.1
-
     steps:
-      - name: Install Hugo CLI
-        run: >-
-          wget --output-document=${{ runner.temp }}/hugo.deb --progress=dot:giga
-          ${RELEASE_PREFIX}${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-          &&
-          sudo dpkg --install ${{ runner.temp }}/hugo.deb
-        env:
-          RELEASE_PREFIX: https://github.com/gohugoio/hugo/releases/download/v
-
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           fetch-depth: 0
           submodules: recursive
 
+      - uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
+
       - id: pages
         name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Build with Hugo
         run: >-
@@ -68,21 +58,21 @@ jobs:
           TZ: Europe/London
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
         with:
           path: ./hugo/public
 
-  # Deployment job.
-  deploy:
-    needs: build
-
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+  # # Deployment job.
+  # deploy:
+  #   needs: build
+  #
+  #   runs-on: ubuntu-latest
+  #
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4
