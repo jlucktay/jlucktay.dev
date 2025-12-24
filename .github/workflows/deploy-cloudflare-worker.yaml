@@ -1,0 +1,35 @@
+---
+name: Deploy Cloudflare Worker
+
+on:
+  push:
+    branches:
+      - # Matches the exact name of a branch or tag name.
+        main
+    paths:
+      - # Any files in this directory and its subdirectories at the root of the repository.
+        go-jlucktay-dev-cf-worker/**
+
+# Allow only one concurrent deployment.
+concurrency:
+  group: ${{ github.workflow_ref }}
+  cancel-in-progress: true
+
+# Default to bash.
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy-cloudflare-worker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Deploy to Cloudflare Workers with Wrangler
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
+        with:
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: go-jlucktay-dev-cf-worker
