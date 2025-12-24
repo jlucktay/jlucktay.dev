@@ -1,4 +1,4 @@
 #:schema https://mise.jdx.dev/schema/mise.json
 
 [tools]
-"aqua:gohugoio/hugo/hugo-extended" = "0.152.2"
+"aqua:cargo-bins/cargo-binstall" = "latest"
