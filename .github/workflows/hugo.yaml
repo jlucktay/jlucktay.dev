@@ -1,3 +1,4 @@
+---
 # Sample workflow for building and deploying a Hugo site to GitHub Pages.
 name: Deploy Hugo site to Pages
 
@@ -19,7 +20,7 @@ permissions:
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: pages
+  group: ${{ github.workflow_ref }}
   cancel-in-progress: false
 
 # Default to bash.
@@ -28,7 +29,6 @@ defaults:
     shell: bash
 
 jobs:
-  # Build job.
   build:
     runs-on: ubuntu-latest
 
@@ -39,19 +39,20 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
-      - uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
+      - name: Run 'mise install' with tool versions from local '.mise.toml' file
+        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
 
       - id: pages
         name: Configure GitHub Pages
         uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
 
       - name: Build with Hugo
+        working-directory: ./hugo
         run: >-
           hugo
           --baseURL "${{ steps.pages.outputs.base_url }}/"
           --gc
           --minify
-        working-directory: ./hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
@@ -62,7 +63,6 @@ jobs:
         with:
           path: ./hugo/public
 
-  # Deployment job.
   deploy:
     needs: build
 
@@ -73,6 +73,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - id: deployment
+        name: Deploy to GitHub Pages
         uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
