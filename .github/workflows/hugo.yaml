@@ -7,6 +7,8 @@ on:
       - # Matches the exact name of a branch or tag name.
         main
     paths:
+      - # This workflow.
+        .github/workflows/hugo.yaml
       - # Any files in this directory and its subdirectories at the root of the repository.
         hugo/**
 

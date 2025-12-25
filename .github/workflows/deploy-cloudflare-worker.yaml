@@ -7,6 +7,8 @@ on:
       - # Matches the exact name of a branch or tag name.
         main
     paths:
+      - # This workflow.
+        .github/workflows/deploy-cloudflare-worker.yaml
       - # Any files in this directory and its subdirectories at the root of the repository.
         go-jlucktay-dev-cf-worker/**
 
