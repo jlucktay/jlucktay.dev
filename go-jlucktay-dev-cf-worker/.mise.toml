@@ -1,4 +1,0 @@
-#:schema https://mise.jdx.dev/schema/mise.json
-
-[tools]
-"aqua:cargo-bins/cargo-binstall" = "latest"

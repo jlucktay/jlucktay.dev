@@ -27,11 +27,6 @@ jobs:
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
 
-      - name: Run 'mise install' with tool versions from local '.mise.toml' file
-        uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
-        with:
-          working_directory: go-jlucktay-dev-cf-worker
-
       - name: Deploy to Cloudflare Workers with Wrangler
         uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
         with:
