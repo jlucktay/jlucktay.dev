@@ -2,12 +2,13 @@
 name: Deploy Hugo site to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch.
   push:
     branches:
-      - main
-    paths-ignore:
-      - go-jlucktay-dev-cf-worker/**
+      - # Matches the exact name of a branch or tag name.
+        main
+    paths:
+      - # Any files in this directory and its subdirectories at the root of the repository.
+        hugo/**
 
   # Allows you to run this workflow manually from the Actions tab.
   workflow_dispatch:
@@ -42,6 +43,8 @@ jobs:
 
       - name: Run 'mise install' with tool versions from local '.mise.toml' file
         uses: jdx/mise-action@146a28175021df8ca24f8ee1828cc2a60f980bd5 # v3.5.1
+        with:
+          working_directory: hugo
 
       - id: pages
         name: Configure GitHub Pages
