@@ -10,7 +10,6 @@ params:
   mode: toggle # color-mode → light,dark,toggle,auto
 
   subtitle: |-
-    New year, new blog?
     We'll see how often I manage a post.
     Maybe just start out with some [notes](https://v5.chriskrycho.com/notes/noteblogging/)?
 
